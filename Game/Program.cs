@@ -9,6 +9,7 @@ namespace Game
         {
           Console.WriteLine("Player 1, please choose:\n 1 Rock \n 2 Paper \n 3 Scissors");
           int input = int.Parse(Console.ReadLine());
+          Random rnd = new Random();
           Player player1 = null;
           Player player2 = null;
           int check = 1;
@@ -28,8 +29,10 @@ namespace Game
             }
             check++;
           }
-          Console.WriteLine("Player 2, please choose:\n 1 Rock \n 2 Paper \n 3 Scissors");
-          input = int.Parse(Console.ReadLine());
+          //Console.WriteLine("Player 2, please choose:\n 1 Rock \n 2 Paper \n 3 Scissors");
+          input = rnd.Next(1,4);
+          Console.WriteLine($"Computer's choice: {input}");
+
           while(check == 2)
           {
             if(input == 1)
